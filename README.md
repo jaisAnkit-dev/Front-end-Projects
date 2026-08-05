@@ -17,7 +17,7 @@ A simple QR code display card, styled with CSS Flexbox.
 ### 3. Blog Preview Card
 A blog preview card component built with HTML & CSS.
 - 🔗 [View Code](./blog-preview-card-main)
-- 🌐 [Live Preview](https:jaisankit-dev.github.io/Front-end-Projects/blog-preview-card-main/)
+- 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/blog-preview-card-main/)
 
 ## 🛠️ Tech Used
 - HTML5
