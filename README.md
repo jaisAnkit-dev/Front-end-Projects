@@ -7,17 +7,17 @@ A collection of small HTML & CSS projects built to strengthen my front-end funda
 ### 1. Profile Card Responsive
 A responsive profile card layout built with HTML & CSS.
 - 🔗 [View Code](./profile-card-responsive)
-- 🌐 [Live Preview](https://jaisAnkit-dev.github.io/front-end-projects/profile-card-responsive/)
+- 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/profile-card-responsive/)
 
 ### 2. QR Card Design
 A simple QR code display card, styled with CSS Flexbox.
 - 🔗 [View Code](./QR-Card-Design)
-- 🌐 [Live Preview](https://jaisAnkit-dev.github.io/front-end-projects/QR-Card-Design/)
+- 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/QR-Card-Design/)
 
 ### 3. Blog Preview Card
 A blog preview card component built with HTML & CSS.
 - 🔗 [View Code](./blog-preview-card-main)
-- 🌐 [Live Preview](https:jaisAnkit-dev.github.io/front-end-projects/blog-preview-card-main/)
+- 🌐 [Live Preview](https:jaisAnkit-dev.github.io/Front-end-Projects/blog-preview-card-main/)
 
 ## 🛠️ Tech Used
 - HTML5
