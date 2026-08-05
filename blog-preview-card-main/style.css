@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html{
+   --yellow: hsl(47, 88%, 63%);
+   --white: hsl(0, 0%, 100%);
+   --grey-dark: hsl(0, 0%, 7%);
+   --grey-light: hsl(0, 0%, 42%);
+}
+
+body{
+   font-family: "Figtree", sans-serif;
+   font-optical-sizing: auto;
+   /* font-weight: <weight>; */
+   font-style: normal;
+   background-color: var(--yellow);
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+body::selection{
+   color: black;
+   background-color: var(--yellow);
+}
+
+.container{
+   max-width: 280px;
+   width: 100%;
+   background: var(--white);
+   border-radius: 15px;
+   border: 1px solid black;
+   padding: 15px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   box-shadow: 5px 5px 0px black;
+}
+
+.image{
+   width: 100%;
+   border-radius: 15px;
+   margin-bottom: 20px;
+}
+
+.image .banner-image{
+   display: block;
+   width: 100%;
+   border-radius: 15px;
+}
+
+.text-content{
+   width: 100%;
+   display: flex;
+   align-items: flex-start;
+   flex-direction: column;
+}
+
+.text-content .button{
+   font-size: 13px;
+   background-color: var(--yellow);
+   padding: 5px;
+   font-weight: 700;
+   border-radius: 3px;
+   margin-bottom: 8px;
+}
+
+.text-content .publish-info{
+   font-size: 12px;
+   font-weight: 500;
+   color: var(--grey-dark);
+   margin-bottom: 10px;
+}
+
+.text-content .heading{
+   font-size: 18px;
+   color: var(--grey-dark);
+   font-weight: 800;
+   margin-bottom: 5px;
+}
+
+.text-content .heading:hover{
+   color: var(--yellow);
+}
+
+.text-content .description{
+   font-size: 13px;
+   color: var(--grey-light);
+   margin-bottom: 15px;
+}
+
+.personal-details{
+   display: flex;
+   align-items: center;
+}
+
+.personal-details .profile-image{
+   width: 40px;
+}
+
+.personal-details .name{
+   font-size: 13px;
+   font-weight: 750;
+   margin-left: 10px;
+}
