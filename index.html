@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Front-End Projects — Ankit Jaiswal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0c0c0f;
+    --text: #f2f1ee;
+    --muted: #9a9a9f;
+    --dim: #4a4a52;
+    --line: #232329;
+    --accent: #7c9cff;
+    --accent-dim: rgba(124,156,255,0.12);
+    --display: 'Space Grotesk', sans-serif;
+    --body: 'Inter', sans-serif;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--body);
+    padding: 90px 24px 60px;
+  }
+
+  .wrap{ max-width: 680px; margin: 0 auto; }
+
+  /* ---- header ---- */
+  .eyebrow{
+    font-family: var(--display);
+    font-size: 12.5px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 18px;
+  }
+
+  h1{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(30px, 5vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 18px;
+  }
+
+  p.sub{
+    color: var(--muted);
+    font-size: 15.5px;
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 0 8px;
+  }
+
+  .meta-row{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    margin-top: 28px;
+    font-size: 13px;
+    color: var(--dim);
+    font-family: var(--display);
+  }
+  .meta-row a{
+    color: var(--muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1px;
+    transition: color .15s ease, border-color .15s ease;
+  }
+  .meta-row a:hover{ color: var(--accent); border-color: var(--accent); }
+  .meta-row .sep{ color: var(--line); }
+
+  /* ---- log ---- */
+  .log{
+    position: relative;
+    margin-top: 64px;
+    padding-left: 46px;
+  }
+  .log::before{
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 6px;
+    bottom: 6px;
+    width: 1px;
+    background: var(--line);
+  }
+
+  .entry{
+    position: relative;
+    padding-bottom: 46px;
+  }
+  .entry:last-child{ padding-bottom: 0; }
+
+  .entry::before{
+    content: attr(data-index);
+    position: absolute;
+    left: -46px;
+    top: 2px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--display);
+    font-size: 12px;
+    color: var(--dim);
+    transition: border-color .2s ease, color .2s ease;
+  }
+  .entry:hover::before{
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+
+  .entry-title{
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: 19px;
+    margin: 0 0 8px;
+    letter-spacing: -0.005em;
+  }
+
+  .entry-desc{
+    color: var(--muted);
+    font-size: 14.5px;
+    line-height: 1.65;
+    max-width: 460px;
+    margin: 0 0 14px;
+  }
+
+  .tags{
+    display:flex; gap: 8px; flex-wrap: wrap;
+    margin-bottom: 16px;
+  }
+  .tags span{
+    font-family: var(--display);
+    font-size: 11px;
+    color: var(--dim);
+    letter-spacing: 0.03em;
+  }
+  .tags span:not(:last-child)::after{
+    content: "·";
+    margin-left: 8px;
+    color: var(--line);
+  }
+
+  .entry-links{ display:flex; gap: 22px; }
+  .btn{
+    font-family: var(--display);
+    font-size: 13.5px;
+    font-weight: 500;
+    text-decoration: none;
+    color: var(--muted);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color .15s ease;
+    padding-bottom: 2px;
+    border-bottom: 1px solid transparent;
+  }
+  .btn.live{ color: var(--accent); }
+  .btn:hover{ color: var(--text); border-color: currentColor; }
+  .btn.live:hover{ color: var(--accent); border-color: var(--accent); }
+  .btn .arrow{ transition: transform .15s ease; }
+  .btn:hover .arrow{ transform: translateX(2px); }
+
+  footer{
+    max-width: 680px;
+    margin: 70px auto 0;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    color: var(--dim);
+    font-size: 13px;
+    font-family: var(--display);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  footer a{ color: var(--muted); text-decoration: none; }
+  footer a:hover{ color: var(--accent); }
+
+  @media (max-width: 520px){
+    body{ padding: 60px 18px 50px; }
+    .log{ padding-left: 38px; }
+    .log::before{ left: 12px; }
+    .entry::before{ left: -38px; width: 26px; height: 26px; font-size: 11px; }
+    .entry-links{ gap: 16px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .btn, .btn .arrow, .entry::before{ transition: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="eyebrow">Learning in public</div>
+      <h1>Front-end projects,<br>built one at a time.</h1>
+      <p class="sub">Small HTML &amp; CSS builds made while strengthening front-end fundamentals. Each entry links to the code and a live preview — open to feedback on any of it.</p>
+      <div class="meta-row">
+        <span id="entry-count"></span>
+        <span class="sep">/</span>
+        <a href="https://github.com/jaisankit-dev/Front-end-Projects" target="_blank" rel="noopener">source on GitHub</a>
+      </div>
+    </header>
+
+    <div class="log" id="log"><!-- injected --></div>
+  </div>
+
+  <footer>
+    <span>Ankit Jaiswal</span>
+    <a href="https://github.com/jaisankit-dev" target="_blank" rel="noopener">@jaisankit-dev</a>
+  </footer>
+
+<script>
+  // ---------------------------------------------------------------
+  // Add a new project here each time you push one — that's it.
+  // name  -> exact folder name in the repo (case-sensitive)
+  // title -> display name
+  // desc  -> one-line description
+  // tags  -> array of short tech/skill tags
+  // ---------------------------------------------------------------
+  const REPO = "jaisankit-dev/Front-end-Projects";
+  const PAGES_BASE = "https://jaisankit-dev.github.io/Front-end-Projects";
+
+  const projects = [
+    {
+      name: "profile-card-responsive",
+      title: "Profile Card Responsive",
+      desc: "A responsive profile card layout, built to practice flexible sizing and clean component structure.",
+      tags: ["HTML", "CSS", "Responsive"]
+    },
+    {
+      name: "QR-Card-Design",
+      title: "QR Card Design",
+      desc: "A simple QR code display card with focused, minimal styling.",
+      tags: ["HTML", "CSS"]
+    },
+    {
+      name: "blog-preview-card-main",
+      title: "Blog Preview Card",
+      desc: "A blog preview card component — practice with shadows, spacing, and typography hierarchy.",
+      tags: ["HTML", "CSS"]
+    }
+  ];
+
+  const log = document.getElementById("log");
+  const entryCount = document.getElementById("entry-count");
+
+  projects.forEach((p, i) => {
+    const num = String(i + 1).padStart(2, "0");
+    const entry = document.createElement("div");
+    entry.className = "entry";
+    entry.setAttribute("data-index", num);
+    entry.innerHTML = `
+      <h2 class="entry-title">${p.title}</h2>
+      <p class="entry-desc">${p.desc}</p>
+      <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join("")}</div>
+      <div class="entry-links">
+        <a class="btn code" href="https://github.com/${REPO}/tree/main/${encodeURIComponent(p.name)}" target="_blank" rel="noopener">View code</a>
+        <a class="btn live" href="${PAGES_BASE}/${encodeURIComponent(p.name)}/" target="_blank" rel="noopener">Live preview <span class="arrow">→</span></a>
+      </div>
+    `;
+    log.appendChild(entry);
+  });
+
+  entryCount.textContent = `${projects.length} project${projects.length !== 1 ? "s" : ""}`;
+</script>
+</body>
+</html>
