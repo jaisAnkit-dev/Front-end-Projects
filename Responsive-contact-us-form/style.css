@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+   font-family: "Poppins", sans-serif;
+   width: 100vw;
+   height: 100vh;
+   background-color: #E8E9F6;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.container{
+   width: 80%;
+   background-color: white;
+   padding: 35px;
+   border-radius: 10px;
+   display: flex;
+   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+   position: relative;
+}
+
+/* Information section */
+
+.container .info{
+   width: 200px;
+   height: 100%;
+   display: flex;
+   /* flex-wrap: wrap; */
+   flex-direction: column;
+   justify-content: space-between;
+   position: relative;
+}
+
+.container .info::after{
+   content: '';
+   width: 2px;
+   height: 75%;
+   background-color: rgba(0, 0, 0, 0.4);
+   position: absolute;
+   top: 30px;
+   right: -35px;
+}
+
+.container .info h2{
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.container .info p{
+   font-size: 15px;
+   color: rgba(0, 0, 0, 0.3);
+   font-weight: 430;
+   /* text-align: center; */
+}
+
+.address, .phone, .email{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.address{
+   margin-bottom: 25px;
+}
+.phone{
+   margin-bottom: 25px;
+   padding: 0 20px;
+}
+
+.email{
+   padding: 0 20px;
+   margin-bottom: none;
+}
+
+.media-icons{
+   font-size: 30px;
+   margin-bottom: 10px;
+}
+
+/* Form Design */
+
+.container .form-section{
+   margin-left: 85px;
+   display: flex;
+   flex-direction: column;
+}
+
+.form-section h2{
+   color: rgb(60, 32, 149);
+   font-weight: 600;
+   margin-bottom: 5px;
+}
+
+.form-section p{
+   color: rgba(0, 0, 0, 0.7);
+   margin-bottom: 20px;
+}
+
+
+form .input-boxes{
+   display: block;
+   background-color: rgb(240, 241, 246);
+   width: 100%;
+   border: none;
+   padding: 15px;
+   font-size: 15px;
+   box-sizing: border-box;
+   font-family: 'poppins', sans-serif;
+   border-radius: 3px;
+}
+
+form .input-boxes::placeholder{
+   opacity: 0.8;
+   font-family: 'poppins', sans-serif;
+}
+
+form .input-boxes:focus{
+   outline: none;
+}
+
+form #name{
+   margin-bottom: 10px;
+}
+
+form #email{
+   margin-bottom: 10px;
+}
+
+form #message{
+   margin-bottom: 15px;
+   resize: none;
+}
+
+form .send-button{
+   background-color: rgb(60, 32, 149);
+   padding: 8px;
+   border: none;
+   color: white;
+   border-radius: 4px;
+   cursor: pointer;
+   font-size: 14px;
+   font-family: 'poppins', sans-serif;
+   transition: all 0.1s;
+}
+
+form .send-button:hover{
+   background-color: rgb(75, 37, 200);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 950px){
+   .container{
+      width: 90%;
+   }
+}
+
+@media (max-width: 850px){
+   body{
+      height: 100%;
+   }
+   .container{
+      height: auto;
+      padding-top: 30px;
+      flex-direction: column;
+   }
+
+   .container .form-section{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+      margin-bottom: 40px;
+   }
+
+   .container .info::after{
+      display: none;
+      position: relative;
+   }
+
+   .container .info{
+      order: 2;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      /* position: relative; */
+   }
+
+}
+
+@media(max-width: 640px){
+   
+   .info{
+      flex-wrap: wrap;
+   }
+
+   .phone{
+      padding: 0 30px;
+   }
+
+   .email{
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+}
+
+@media(max-width: 400px){
+   .phone{
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .address{
+      margin-left: auto;
+      margin-right: auto;
+   }
+}
