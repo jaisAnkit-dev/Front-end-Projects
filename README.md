@@ -9,6 +9,11 @@ A responsive profile card layout built with HTML & CSS.
 - 🔗 [View Code](./profile-card-responsive)
 - 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/profile-card-responsive/)
 
+### 2. Responsive Contact Us Form
+A contact us form optimized for multiple screen sized.
+- 🔗 [View Code](./Responsive-contact-us-form)
+- 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/Responsive-contact-us-form/)
+
 ### 2. QR Card Design
 A simple QR code display card, styled with CSS Flexbox.
 - 🔗 [View Code](./QR-Card-Design)
