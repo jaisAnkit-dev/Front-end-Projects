@@ -14,17 +14,17 @@ A contact us form optimized for multiple screen sized.
 - 🔗 [View Code](./Responsive-contact-us-form)
 - 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/Responsive-contact-us-form/)
 
-### 2. QR Card Design
+### 3. QR Card Design
 A simple QR code display card, styled with CSS Flexbox.
 - 🔗 [View Code](./QR-Card-Design)
 - 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/QR-Card-Design/)
 
-### 3. Blog Preview Card
+### 4. Blog Preview Card
 A blog preview card component built with HTML & CSS.
 - 🔗 [View Code](./blog-preview-card-main)
 - 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/blog-preview-card-main/)
 
-  ### 4. Landing Page
+  ### 5. Landing Page
 A simple landing page built with HTML & CSS.
 - 🔗 [View Code](./landing-page)
 - 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/landing-page/)
