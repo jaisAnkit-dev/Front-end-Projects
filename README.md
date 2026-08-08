@@ -19,6 +19,11 @@ A blog preview card component built with HTML & CSS.
 - 🔗 [View Code](./blog-preview-card-main)
 - 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/blog-preview-card-main/)
 
+  ### 4. Landing Page
+A simple landing page built with HTML & CSS.
+- 🔗 [View Code](./landing-page)
+- 🌐 [Live Preview](https://jaisankit-dev.github.io/Front-end-Projects/landing-page/)
+
 ## 🛠️ Tech Used
 - HTML5
 - CSS3
